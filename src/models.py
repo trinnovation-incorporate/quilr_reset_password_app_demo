@@ -18,5 +18,12 @@ class OAuthToken(Base):
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer)  # ForeignKey could be added here if needed
     access_token = Column(Text)
-    refresh_token = Column(Text)
+    id_token = Column(Text)
     expires_in = Column(Integer)
+    expires_at = Column(Integer)
+    token_type = Column(String)
+    sub = Column(String)
+    exp = Column(Integer)
+    iat = Column(Integer)
+    iss = Column(String)
+    nonce = Column(String)
